@@ -31,3 +31,8 @@ def update_by_id(id: int, todo: schema.Todo, db: Session = Depends(db.getdb)):
 @app.delete("/api/todo/{id}")
 def delete_by_id(id: int, db: Session = Depends(db.getdb)):
     return service.delete_by_id(id,db)
+
+
+@app.get("/api/todo")
+def get_page(page: int = 1, size: int = 10, db: Session = Depends(db.getdb)):
+    return service.get_page(page,size,db)

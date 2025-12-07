@@ -5,3 +5,7 @@ class Todo(BaseModel):
     completed: bool
     item: str
     
+class PaginatedTodo(BaseModel):
+    page: int
+    size: int
+    data: Todo

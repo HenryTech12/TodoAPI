@@ -76,4 +76,11 @@ def delete_by_id(id,db):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail = f'data with id: {id} not found')
     
         
-    
+def get_page(page, size, db):
+    skip = (page - 1) * size
+    todo_page = db.query(models.Todo).offset(skip).limit(size).all()
+    if not todo_page:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail = "no data found")
+    else:
+        paginated_response = schema.PaginatedTodo(page=page, size = size, data=todo_page)
+        return paginated_response;

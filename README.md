@@ -25,7 +25,7 @@ This project demonstrates CRUD operations, database connection, request validati
 |----------|------------|
 | Backend | FastAPI |
 | ORM | SQLAlchemy |
-| Database | SQLite (default) / MySQL / PostgreSQL |
+| Database | SQLite|
 | Validation | Pydantic |
 | Documentation | Swagger UI & ReDoc |
 

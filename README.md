@@ -43,5 +43,5 @@ This project demonstrates CRUD operations, database connection, request validati
 ### 📥 Clone Repository
 
 ```bash
-git clone https://github.com/your-username/todo-fastapi.git
+git clone [https://github.com/your-username/todo-fastapi.git](https://github.com/HenryTech12/TodoAPI)
 cd todo-fastapi
